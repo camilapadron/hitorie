@@ -1,0 +1,326 @@
+.boton{
+    @include mp(0, 1rem);
+    border: $no;
+    border-radius: $b-r;
+    font-size: $font-p;
+    background-color: $base;
+    color: $blanco;
+    cursor: pointer;
+    transition: all 0.4s;
+    &:hover {
+        transform: scale(1.1);
+        background-color: $hover;}
+    }
+
+body{
+    margin:map-get($map: $body, $key:m-p);
+    padding:map-get($map: $body, $key: m-p);
+    line-height: 1.6;
+    font-family: $font;
+    background-color: map-get($map: $body, $key: bg);
+}
+
+/*HEADER*/
+header {
+    position: sticky;
+    top: $no;
+    width: $w-h;
+    z-index: 111;
+    .navbar {
+        @include mp($no, $no);
+        background-color: $base!important;
+        width: $w-h;
+        .nav-item a {
+            font-size: 1rem;
+            font-family: $font;
+            font-weight: 600;
+            color: $blanco;
+            &:hover {
+                color: $hover;}
+            }
+                .active {
+                    color: $active !important;
+                }
+            }
+        }
+
+/*FOOTER*/
+.footer {
+    background-color: $base;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    ol {
+        font-size: 2rem;
+        padding: 0,3rem;
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        li { 
+            a {
+                color: $blanco;
+                padding: 1rem;
+                transition: all 0.4s;
+                &:hover {
+                    color: $hover;}
+                }
+            }
+        }
+        p{
+            color: $blanco;
+            padding: 0rem;}
+            form {
+                padding-top: 1rem;
+                padding-left: 1.5rem;
+                input{
+                    border: $no;
+                    border-radius: $b-r - 5;
+                }
+                .boton {
+                    font-size: 0.8rem;
+                    border-radius: $b-r - 5;
+                    padding: 0.3rem;
+                    background-color: $hover;
+                    color: $blanco;
+                    &:hover{
+                        background-color: $negro;
+                        color: $blanco;}
+                    }
+                }
+            }
+
+/*INDEX*/
+.inicio{
+    .presentacion {
+        @include mp(0, 0);
+        @include wh(auto, auto);
+        background: url("../img/index/hitoriepresentacion.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        color: $blanco;
+        padding-top: 100px;
+        padding-bottom: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        .flex-item1 {
+            text-align: center;
+             h1 {
+                color: $negro;
+                text-shadow: 1px 1px 2px $blanco;
+                opacity: 100%;
+                font-size: $font-h1;
+                margin-top: $no;
+                padding-right: 20px;}
+                p {
+                    font-weight: bold;
+                    color: $negro;
+                    text-shadow: 1px 1px 2px $blanco;
+                    font-size:$font-p;
+                    padding-left: 1rem;
+                }
+            }
+            img {
+                @include wh(80%, auto);
+            }
+        }
+        .card{
+            border: $no;
+            border-radius: $b-r;
+            box-shadow: 0px 1px 10px rgba(109, 5, 5, 0.441);
+            img{
+                border-radius: $b-r;
+            }
+        }
+        .wrapper {
+            background-color: $blanco;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            #dist-secc {
+                color: $blanco;
+                text-align: center;
+                .carta {
+                    .c1 {
+                        @include mp(1.8rem, 3.1rem);
+                        border-radius: $b-r;
+                        box-shadow: 0px 1px 10px rgba(7, 20, 99, 0.441);
+                        text-align: center;
+                        background-image: url("../img/index/banner.gif");
+                        background-position: center center;
+                        background-size: cover;}
+                        .c2 {
+                            @extend .c1;
+                            background-image: url("../img/index/banner2.gif");
+                        }
+                    }
+                }
+            }
+        }
+
+/*GALERIA*/
+.galeria{
+    img{
+        border-radius: $b-r;
+        box-shadow: 0px 1px 10px rgba(0, 8, 255, 0.441);
+        &:hover{
+            -webkit-transform:scale(1.3);
+            transform:scale(1.3);}
+        }
+    }
+
+/*DISCOS*/
+.row{ 
+    @include mp(0 auto, 0);
+    max-width: 0 auto;
+    .tipo {
+        margin-top: 1rem;
+        border-bottom: 1px solid $negro;}
+        .product {
+            @include mp(0, 0.6rem);
+            overflow:hidden;
+            border-radius: $b-r;
+            position: relative;
+            box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+            img{
+                margin: auto;
+            }
+            .btn {
+                border-radius: $b-r;
+                color: $blanco;
+                background-color: $base;
+                border: $no;
+                &:hover {
+                    background-color: $hover;}
+                }
+                .off {
+                    @include wh(5rem, 1.8rem);
+                    border-radius: $b-r - 5;
+                    background-color: $hover!important;
+                    color: $blanco;
+                    position: absolute;
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    left: 65%;
+                    top: 6%;
+                    font-size: 13px;
+                }
+                .product_fav {
+                    @include wh(2.25rem, 2.4rem);
+                    border-radius: $b-r;
+                    text-align: center;
+                    display: inline-block;
+                    cursor: pointer;
+                    -webkit-transition: all 200ms ease;
+                    -moz-transition: all 200ms ease;
+                    -ms-transition: all 200ms ease;
+                    -o-transition: all 200ms ease;
+                    transition: all 200ms ease;
+                    &:hover{
+                        background: $hover;}
+                        i {
+                            line-height: 40px;
+                            color: $base;
+                            font-size: 15px;
+                            &:hover{
+                                color: $base;}
+                            }
+                        }
+                        .about{
+                            margin-top: 12px;
+                            span {
+                                color: $negro;
+                                font-size: 16px;}
+                            }
+                        }
+                    }
+
+/*MUSICA*/
+.musica{
+    .card-group{
+        .card{
+            border: $no;
+            padding: 1rem;
+            iframe{
+                box-shadow: 0px 1px 10px rgba(3, 36, 255, 0.441);
+                @include wh(auto, 19.6rem);
+                border-radius: $b-r;}
+                .col{
+                    .card{
+                        border: $no;
+                    }
+                }
+            }
+        }
+        .card{
+            border: $no;
+            img{
+                border-radius: $b-r;
+                box-shadow: 0px 1px 10px rgba(255, 0, 0, 0.441);
+            }
+            .title {
+                @include wh(100%, 100%);
+                background-color: rgba(0, 0, 0, 0.519);
+                color: $blanco;
+                border-radius: $b-r;
+                font-size: $font-card;
+                opacity: $no;           
+                padding: 1rem;
+                text-align: center;
+                position: absolute;   
+                transition: 0.6s;
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+        .mv{
+            .row{
+                width: 100%;
+                padding: 1rem;
+                .card{
+                    border: $no;
+                    img{
+                        height: 15rem;
+                        border-radius: $b-r;
+                    }
+                    .title {
+                        @include wh(100%, 100%);
+                        background-color: rgba(0, 0, 0, 0.519);
+                        color: $blanco;
+                        border-radius: $b-r;
+                        font-size: $font-card;
+                        opacity: $no;
+                        padding: $no;
+                        text-align: center;
+                        position: absolute;   
+                        transition: 0.6s;
+                        &:hover{
+                            opacity: 1;}
+                        }
+                    }
+                }
+            }
+        }
+
+/*CONTACTO*/
+.mainContacto {
+    @include mp (0 auto, 2rem);
+    font-family: $font;
+    max-width: 80rem;
+    height: 0 auto;
+    div{
+        padding: 3px;
+        h1 {
+            padding: 2rem;}
+        }
+        .comentario{
+            padding-bottom: 1rem!important;}
+        .boton{
+            padding: 0.5rem;
+        }
+    }

@@ -1,0 +1,50 @@
+$vista:desktop;
+
+body {
+@if $vista == desktop {
+@media only screen and (min-width:1024px){
+h1{font-size:$font-h1;}
+h3{font-size:$font-h3;}
+input{font-size:$font-p;}
+    
+}
+}@else if $vista == mobile {
+
+
+} @else {
+h1{font-size:$font-h1;}
+h3{font-size:$font-h2;}
+input{font-size:$font-p;}
+}
+}
+
+@media only screen and (max-width:767px) {
+    .mainContacto {padding: 1rem!important;}
+    h1{font-size:$font-h1;}
+    h3{font-size:$font-h3;}
+    input{font-size:$font-p;}
+    .row{
+        .tipo{
+            margin-top: -30px!important;
+            padding: 0;
+        }
+    }
+}
+
+    @media only screen and (max-width:520px){
+        .mainContacto{
+            h1{
+            font-size: 2rem;
+        }
+    }
+}
+
+@media only screen and (max-width:520px){
+    footer{
+        p{
+            text-align: center;}
+            .form{
+                text-align: center;
+            }
+        }
+    }

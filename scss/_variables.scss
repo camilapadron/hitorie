@@ -1,0 +1,32 @@
+@mixin mp ($m, $p){
+    margin: $m;
+    padding: $p;
+}
+
+@mixin wh ($w, $h){
+    width: $w;
+    height: $h;
+}
+
+/*color*/
+$blanco:#fff;
+$negro:#000000;
+$base: #840028;
+$hover: #004259;
+$active: #558E9F;
+
+$font:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+$font-p: 1.1rem;
+$font-h1: 3.0rem;
+$font-h2: 2.4rem;
+$font-h3: 2.0rem;
+$font-card: 1.5rem;
+$no: 0;
+$b-r: 15px;
+
+$w-h: 100%;
+
+$body: (
+m-p:0,
+bg:#fff,
+)
