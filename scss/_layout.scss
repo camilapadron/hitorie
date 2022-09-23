@@ -312,7 +312,7 @@ header {
 .mainContacto {
     @include mp (0 auto, 2rem);
     font-family: $font;
-    max-width: 80rem;
+    max-width: 40rem;
     height: 0 auto;
     div{
         padding: 3px;
